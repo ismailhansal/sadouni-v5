@@ -72,13 +72,13 @@
   </div>
   <!-- End Preloader -->
   <!-- Start Header Section -->
-  <header class="cs_site_header cs_style_1 cs_sticky_header cs_heading_color cs_heading_font">
+<header class="cs_site_header cs_style_1 cs_sticky_header cs_heading_color cs_heading_font cs_header_transparent">
     <div class="cs_main_header">
       <div class="container-fluid">
         <div class="cs_main_header_in">
           <div class="cs_main_header_left">
             <a class="cs_site_branding" href="index.html">
-              <img style=" width: 170px; height:auto; " src="assets/img/sadouni-logo.svg" alt="Logo">
+              <img style=" width: 170px; height:auto; " src="assets/img/sadouni-logo-dark.svg" alt="Logo">
             </a>
           </div>
           <div class="cs_main_header_center">
@@ -94,7 +94,15 @@
                   <li><a href="about.html">À Propos</a></li>
                   
                  
-                  <li class="menu-item"><a href="services.html">Services</a></li>
+<li class="menu-item menu-item-has-children ">
+  <a href="#">Services</a>
+  <ul class="sub-menu">
+    <li><a href="service-cataracte.html">Chirurgie de la cataracte</a></li>
+    <li><a href="service-retine.html">Maladies de la rétine</a></li>
+    <li><a href="service-glaucome.html">Glaucome</a></li>
+    <li><a href="service-consultation.html">Consultation ophtalmologique</a></li>
+  </ul>
+</li>
                   <li class="menu-item">
                     <a href="blog.html">Blog</a>
                    
@@ -113,15 +121,20 @@
   </header>
   <!-- End Header Section -->
   <!-- Start Hero Section -->
-  <section class="cs_hero cs_style_1 cs_type_5 cs_bg_filed position-relative" data-src="assets/img/hero_bg_3.png">
+  <section class="cs_hero cs_style_1 cs_type_5 cs_bg_filed position-relative ">
+       <video class="cs_hero_video" autoplay muted loop playsinline>
+  <source src="assets/video/eye-surgery.mp4" type="video/mp4">
+</video>
+
+ 
+
     <div class="container">
-      <div class="cs_hero_content_wrapper">
-        <div class="cs_hero_thumbnail">
-          <img src="assets/img/hero_img_1.jpeg" alt="Image">
-        </div>
-        <div class="cs_hero_content wow fadeInRight" data-wow-duration="0.9s" data-wow-delay="0.25s">
-          <h3 class="cs_hero_title_mini cs_fs_18 cs_accent_color cs_semibold">Dr. Choaib Sadouni</h3>
-          <h1 class="cs_hero_title cs_fs_70">Spécialiste en chirurgie de la Cataracte</h1>
+<div class="cs_hero_content_wrapper cs_hero_centered">
+        
+      
+        <div class="cs_hero_conten wow fadeInRight" data-wow-duration="0.9s" data-wow-delay="0.25s">
+          <h3 class="cs_hero_title_mini cs_fs_18 cs_accent_color cs_semibold ">Dr. Choaib Sadouni</h3>
+          <h1 class="cs_hero_title cs_fs_48">Spécialiste en chirurgie de la Cataracte</h1>
 <p class="cs_hero_subtitle cs_fs_20 cs_medium cs_heading_color">
 Dr Choaib Sadouni vous accompagne avec expertise dans la chirurgie de la cataracte, pour des résultats sûrs et fiables.
 </p>
@@ -129,68 +142,132 @@ Dr Choaib Sadouni vous accompagne avec expertise dans la chirurgie de la catarac
             <a href="contact.html" class="cs_btn cs_style_1 cs_fs_18 cs_semibold cs_accent_bg  cs_radius_100">
               <span class="cs_btn_text">Prendre un Rendez-vous</span>
             </a>
-            <a href="https://www.youtube.com/embed/rRid6GCJtgc"
+
+             <a href="https://www.youtube.com/embed/rRid6GCJtgc"
               class="cs_player_btn cs_style_1 cs_type_1 cs_video_open">
-              <span class="cs_player_btn_icon cs_center"><i class="fa-solid fa-play"></i></span>
+              <span class="cs_player_btn_icon cs_center"><i class="fa-solid fa-play"></i></span> 
               <span class="cs_play_btn_text cs_fs_18 cs_semibold cs_accent_color">Voir Comment Nous Travaillons</span>
             </a>
+           
           </div>
           <div class="cs_height_66 cs_height_lg_40"></div>
           <div class="cs_counter_1_wrap">
             <div class="cs_counter cs_style_1">
-              <h2 class="cs_counter_number cs_fs_48 cs_accent_color mb-0">10+</h2>
-              <p class=" cs_fs_20 cs_medium mb-0">Expértise</p>
+              <h2 class="cs_counter_number  cs_accent_color mb-0">10+</h2>
+              <p class=" cs_fs_20 cs_medium mb-0 cs_white_color">Expértise</p>
             </div>
-            <div class="cs_counter cs_style_1">
-              <h2 class="cs_counter_number cs_fs_48 cs_accent_color mb-0">3000+</h2>
-              <p class=" cs_fs_20 cs_medium mb-0">Patients Soignés</p>
+            <div class="cs_counter cs_style_1 ">
+              <h2 class="cs_counter_number  cs_accent_color mb-0">3000+</h2>
+              <p class=" cs_fs_20 cs_medium mb-0 cs_white_color ">Patients Soignés</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="cs_hero_shape_2 position-absolute">
+      <div class="cs_hero_shape_2 position-absolute ">
         <img src="assets/img/hero_shape_1.svg" alt="Shape">
       </div>
     </div>
+
+  <!-- Start mobile subsection (empilé) -->
+  <section class="cs_hero_info_box_mobile">
+    <div class="cs_info_item">
+      <div class="cs_iconbox_icon">
+        <img style="width: 60px;" src="assets/img/icons/clock.svg" alt="Icon">
+      </div>
+      <h4>Horaires d’ouverture</h4>
+      <p>Lun – Sam : 09h00 – 18h00</p>
+      <p>Samedi : 09h00 - 15h00</p>
+      <p>Dimanche : Fermé</p>
+    </div>
+
+    <div class="cs_info_item">
+      <div class="cs_iconbox_icon cs_center">
+        <img style="width:55px;" src="assets/img/icons/location.svg" alt="Icon">
+      </div>
+      <h4>Notre Cabinet</h4>
+      <p>Notre cabinet est idéalement situé au centre de Casablanca, accessible en voiture et en transports en commun.</p>
+      <a href="contact.html" class="cs_btn cs_style_1 cs_fs_18 cs_semibold cs_accent_bg cs_radius_100">
+        <span class="cs_btn_text">Voir Itinéraire</span>
+      </a>
+    </div>
+
+    <div class="cs_info_item">
+      <div class="cs_iconbox_icon cs_center">
+        <img style="width: 50px;" src="assets/img/icons/phone.svg" alt="Icon">
+      </div>
+      <h4>Prise de rendez-vous</h4>
+      <p>Appelez-nous 24h/24 et 7j/7 en cas d’urgence ou pour prendre rendez-vous et vérifier votre santé.</p>
+      <a href="contact.html" class="cs_btn cs_style_1 cs_fs_18 cs_semibold cs_accent_bg cs_radius_100">
+        <span class="cs_btn_text">Prendre un Rendez-vous</span>
+      </a>
+    </div>
+  </section>
+  <!-- End mobile subsection -->
+
+
+
+
+      <!-- Startsubsection -->
+
+
+<div class="cs_hero_info_box  ">
+  <div class="cs_info_item">
+    <div class="cs_iconbox_icon ">
+      <img style="width: 60px;" src="assets/img/icons/clock.svg" alt="Icon">
+     </div>
+    <h4>Horaires d’ouverture</h4>
+    <p>Lun – Sam : 09h00 – 18h00</p>
+    <p>Samedi : 09h00 - 15h00</p>
+    <p>Dimanche : Fermé</p>
+
+  </div>
+
+  <div class="cs_info_item">
+    <div class="cs_iconbox_icon cs_center">
+                <img style="width:55px;" src="assets/img/icons/location.svg" alt="Icon">
+              </div>
+    <h4>Notre Cabinet</h4>
+    <p>Notre cabinet est idéalement situé au centre de Casablanca, accessible en voiture et en transports en commun.</p>
+
+   <a href="contact.html" class="cs_btn cs_style_1 cs_fs_18 cs_semibold cs_accent_bg  cs_radius_100">
+              <span class="cs_btn_text">Voir Itinéraire</span>
+            </a>
+  </div>
+
+  <div class="cs_info_item">
+     <div class="cs_iconbox_icon cs_center">
+                <img style="width: 50px;" src="assets/img/icons/phone.svg" alt="Icon">
+              </div>
+    <h4>Prise de rendez-vous</h4>
+    <p>Appelez-nous 24h/24 et 7j/7 en cas d’urgence ou pour prendre rendez-vous et vérifier votre santé.</p>
+    <a href="contact.html" class="cs_btn cs_style_1 cs_fs_18 cs_semibold cs_accent_bg  cs_radius_100">
+              <span class="cs_btn_text">Prendre un Rendez-vous</span>
+            </a>
+  </div>
+</div>
+
+  <!-- End subSection -->
+
+
+
+
+
   </section>
   <!-- End Hero Section -->
-  <!-- Start Features Section -->
-  <section class="cs_accent_bg">
-    <div class="cs_height_60 cs_height_lg_60"></div>
-    <div class="container-fluid">
-      <div class="cs_iconbox_grid cs_type_3">
-        <div class="cs_iconbox cs_style_6">
-          <div class="cs_iconbox_icon">
-            <img src="assets/img/icons/feature_icon_1.svg" alt="Icon">
-          </div>
-          <h3 class="cs_iconbox_title cs_fs_20 cs_medium cs_white_color mb-0">Chirurgie de la Cataracte</h3>
-        </div>
-        <div class="cs_iconbox cs_style_6">
-          <div class="cs_iconbox_icon">
-            <img src="assets/img/icons/feature_icon_2.svg" alt="Icon">
-          </div>
-          <h3 class="cs_iconbox_title cs_fs_20 cs_medium cs_white_color mb-0">Correction de la Vision au Laser</h3>
-        </div>
-        <div class="cs_iconbox cs_style_6">
-          <div class="cs_iconbox_icon">
-            <img src="assets/img/icons/feature_icon_3.svg" alt="Icon">
-          </div>
-          <h3 class="cs_iconbox_title cs_fs_20 cs_medium cs_white_color mb-0">Contrôle de la Myopie Infantile</h3>
-        </div>
-        <div class="cs_iconbox cs_style_6">
-          <div class="cs_iconbox_icon">
-            <img src="assets/img/icons/feature_icon_4.svg" alt="Icon">
-          </div>
-          <h3 class="cs_iconbox_title cs_fs_20 cs_medium cs_white_color mb-0">Décollement de la Rétine</h3>
-        </div>
-      </div>
-    </div>
-    <div class="cs_height_60 cs_height_lg_60"></div>
-  </section>
-  <!-- End Features Section -->
 
 
 
+
+
+
+
+
+
+
+
+
+
+  
 
 
   

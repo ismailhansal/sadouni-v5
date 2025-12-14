@@ -1849,6 +1849,7 @@ label {
   transition: background-size 0.42s cubic-bezier(0.49, 0.49, 0.08, 1), color 0.27s ease-out;
   background-position: 100% calc(100% - 0px);
   background-size: 0 1px;
+  color: white;
 }
 .cs_player_btn.cs_style_1.cs_type_1 .cs_player_btn_icon {
   border: 1px solid var(--accent-color);
@@ -4390,6 +4391,24 @@ a.ui-button:active,
   max-width: 28px;
 }
 
+.cs_hero_video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.cs_hero_overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 2;
+}
+
+
 .cs_header_overlay {
   position: fixed;
   height: 100vh;
@@ -4399,6 +4418,22 @@ a.ui-button:active,
   left: 0;
   cursor: -webkit-zoom-out;
   cursor: zoom-out;
+}
+
+.cs_header_transparent {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 999;
+}
+
+.cs_header_transparent .cs_nav_list a,
+.cs_header_transparent .cs_header_number {
+  color: white;
+}
+.cs_nav_list_mobile a{
+  color : black;
 }
 
 .cs_search_close {
@@ -5869,6 +5904,15 @@ a.ui-button:active,
   left: 0;
   top: 0;
 }
+
+
+.cs_about.cs_style_1 {
+  margin-top: 300px; 
+  position: relative; 
+}
+
+
+
 .cs_about.cs_style_1.cs_type_1 .cs_about_thumbnail {
   padding-bottom: 100px;
 }
@@ -6374,7 +6418,8 @@ a.ui-button:active,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 80px 0 0;
+  padding: 0px 0 0;
+
 }
 @media (max-width: 991px) {
   .cs_hero.cs_style_1 {
@@ -6399,7 +6444,7 @@ a.ui-button:active,
     padding: 130px 0 80px;
   }
   .cs_hero.cs_style_1.cs_type_1 .cs_hero_content {
-    max-width: 550px;
+    max-width:1440px;
   }
 }
 @media (max-width: 767px) {
@@ -6519,6 +6564,7 @@ a.ui-button:active,
 }
 .cs_hero.cs_style_1.cs_type_3 .cs_hero_title {
   margin-bottom: 70px;
+  
 }
 @media (max-width: 1400px) {
   .cs_hero.cs_style_1.cs_type_3 .cs_hero_title {
@@ -6729,6 +6775,26 @@ a.ui-button:active,
   position: relative;
   z-index: 1;
 }
+
+.cs_hero {
+  min-height: 100vh;
+}
+
+.cs_hero_centered {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.cs_hero_content {
+  max-width: 850px;
+}
+
+
+
 @media (max-width: 991px) {
   .cs_hero.cs_style_1 .cs_hero_content {
     max-width: 470px;
@@ -6839,21 +6905,29 @@ a.ui-button:active,
   margin-bottom: 10px;
   letter-spacing: 1.44px;
   line-height: 1.55em;
+  color: #d2e4fe;
+  
 }
 .cs_hero.cs_style_1 .cs_hero_title_mini.cs_white_color {
   color: rgba(255, 255, 255, 0.8);
+  
 }
 .cs_hero.cs_style_1 .cs_hero_title {
   margin-bottom: 30px;
+    color:white;
+  
 }
 .cs_hero.cs_style_1 .cs_hero_title span {
   background-color: var(--accent-color);
   display: inline-block;
   padding: 5px 35px;
+    color:white;
 }
 .cs_hero.cs_style_1 .cs_hero_subtitle {
   opacity: 0.8;
   margin-bottom: 30px;
+    color:white;
+  
 }
 .cs_hero.cs_style_1 .cs_hero_doctorbox {
   width: 125px;
@@ -6984,16 +7058,13 @@ a.ui-button:active,
           transform: rotate(90deg);
 }
 .cs_hero.cs_style_1 .cs_hero_btn_group {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 20px;
+  display: flex;          /* Flex container */
+  align-items: center;    /* Centre verticalement */
+  justify-content: center; /* Centre horizontalement */
+  gap: 20px;              /* Espace entre les boutons */
+  flex-wrap: nowrap;       /* Empêche le passage à la ligne */
 }
+
 .cs_hero.cs_style_1 .cs_hero_btn_group.cs_type_1 {
   max-width: 730px;
   gap: 105px;
@@ -8932,11 +9003,13 @@ a.ui-button:active,
 }
 
 .cs_counter_1_wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 80px;
+  display: flex;            /* Flex container */
+  gap: 80px;                /* Espace entre les counters */
+  justify-content: center;  /* Centre horizontalement */
+  align-items: center;      /* Centre verticalement si nécessaire */
+  flex-wrap: wrap;          /* Permet de passer à la ligne sur mobile */
 }
+
 @media (max-width: 575px) {
   .cs_counter_1_wrap {
     -webkit-box-orient: vertical;
@@ -9056,6 +9129,7 @@ a.ui-button:active,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  color: white;
 }
 
 .cs_counter.cs_style_2 {
@@ -11678,3 +11752,153 @@ Pricing controller
   -webkit-box-shadow: none;
           box-shadow: none;
 }/*# sourceMappingURL=style.css.map */
+
+
+.cs_hero_info_box {
+  position: absolute;
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  background:#edf0f3;
+  opacity: 98%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 30px;
+  margin-top: 100px;
+  border-radius: 16px;
+  z-index: 4;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+.cs_info_item h4 {
+  margin-bottom: 8px;
+}
+
+.cs_margin_top{
+  margin-top: 80px;
+}
+
+.cs_margin_bottom{
+  margin-bottom: 80px;
+}
+
+.cs_padding_bottom{
+  padding-bottom: 200px;
+}
+
+
+.cs_style_2{
+  background-color: #132573;
+  padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Correction du flux Hero + Info Boxes --- */
+@media (max-width: 991px) {
+  /* 1. La section Hero s'adapte à son contenu (plus de hauteur fixe) */
+  .cs_hero {
+    height: 100%; 
+    max-height: 50vh;   /* optionnel, sécurité */
+      /* s'adapte à la hauteur de la section hero (50vh) */
+    display: flex;
+    width: 100%;
+    object-fit: cover;  /* garde le ratio et couvre la section */
+
+    flex-direction: column;
+    padding-bottom: 40px;
+  }
+
+  /* 2. Centre le texte et ajuste les espacements */
+  .cs_hero_content_wrapper {
+    padding: 120px 20px 60px; /* Espace pour le header et séparation basse */
+    text-align: center;
+  }
+
+  .cs_hero_btn_group {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* 3. Force les Info Boxes à venir l'une après l'autre SOUS le Hero */
+  .cs_hero_info_box {
+    position: relative !important; /* Sort du mode "floating" de desktop */
+    display: none;
+    flex-direction: column;
+    margin-top: 0; /* Aligné directement après le contenu hero */
+    padding: 0 15px;
+    gap: 15px;
+    bottom: auto;
+    transform: none !important;
+    z-index: 10;
+  }
+
+  /* 4. Style des items pour la lisibilité sur mobile */
+  .cs_info_item {
+    width: 100% !important;
+    background: white; /* Fond blanc pour détacher de la vidéo */
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .cs_info_item h4 {
+    margin-top: 15px;
+    font-size: 20px;
+  }
+
+  /* Masquer les formes décoratives qui polluent l'écran mobile */
+  .cs_hero_shape_2 {
+    display: none;
+  }
+
+ .cs_hero_info_box_mobile {
+  position: absolute;
+  top: 90%; /* ou px : top: 400px; selon ce qui rend bien */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%; 
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  z-index: 4;
+}
+
+.cs_about.cs_style_1{
+  margin-top: 900px;
+}
+
+
+}
+
+
+@media (min-width:1440px) {  
+
+  .cs_hero_info_box_mobile {
+    display: none;
+   
+  }
+
+
+}
+
