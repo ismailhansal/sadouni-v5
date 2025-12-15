@@ -11820,6 +11820,10 @@ Pricing controller
   margin-top: 10px;
 }
 
+.cs_margin_top3{
+  margin-top: 150px;
+}
+
 
 .cs_margin_bottom{
   margin-bottom: 80px;
@@ -11834,7 +11838,7 @@ Pricing controller
 }
 
 .cs_padding_bottom3{
-  padding-bottom: 100px;
+  padding-bottom: 200px;
 }
 
 
@@ -11938,10 +11942,11 @@ Pricing controller
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   z-index: 4;
+  
 }
 
 .cs_about.cs_style_1{
-  margin-top: 900px;
+  margin-top: 1000px;
 }
 
 .cs_site_header .cs_nav_list a{
