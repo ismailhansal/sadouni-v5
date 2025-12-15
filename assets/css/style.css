@@ -10235,7 +10235,6 @@ Pricing controller
   width: 245px;
   height: 245px;
   padding: 20px;
-  border: 1px dashed var(--heading-color);
   margin: 0 auto 30px;
 }
 @media (max-width: 991px) {
@@ -10247,8 +10246,14 @@ Pricing controller
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
-  border-radius: inherit;
+          height: 190px;
+          border-radius: 5%;/*Border radius du process de travail*/
 }
+
+
+
+
+
 .cs_card.cs_style_5 .cs_card_title {
   margin-bottom: 23px;
 }
@@ -11753,12 +11758,13 @@ Pricing controller
 
 
 .cs_hero_info_box {
+  /* Disposition du conteneur parent (Grid) */
   position: absolute;
   bottom: -200px;
   left: 50%;
   transform: translateX(-50%);
-  width: 85%;
-  background:#edf0f3;
+  width: 85%; /* Maintient une largeur raisonnable pour le desktop */
+  background: #edf0f3;
   opacity: 98%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -11770,13 +11776,50 @@ Pricing controller
   box-shadow: 0 20px 60px rgba(0,0,0,0.15);
 }
 
+.cs_info_item {
+  /* Disposition du contenu de chaque colonne (Flexbox Vertical) */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Le contenu commence en haut */
+  
+  /* 🔑 Alignement horizontal du contenu (icône, texte, bouton) au centre */
+  align-items: center; 
+  text-align: center; /* Assure que le texte est centré */
+}
+
 .cs_info_item h4 {
   margin-bottom: 8px;
 }
 
-.cs_margin_top{
-  margin-top: 80px;
+/* Assure le centrage horizontal des icônes au cas où leur conteneur a une petite largeur */
+.cs_iconbox_icon {
+    display: block; 
+    margin: 0 auto 15px auto; /* Centre le conteneur et ajoute une marge en dessous */
 }
+
+/* S'applique spécifiquement aux boutons/liens à l'intérieur des boîtes d'information */
+.cs_info_item > a.cs_btn {
+  /* 🔑 Pousse le bouton vers le bas, assurant l'alignement horizontal avec les autres boutons */
+  margin-top: auto; 
+  
+  /* 🔑 Permet au bouton de n'utiliser que la largeur nécessaire (non étiré) */
+  width: auto; 
+  
+  /* Ajoute un petit espace entre le texte et le bouton */
+  margin-top: 15px; 
+  
+  /* Ajustement de la taille du padding pour un bouton plus compact et esthétique */
+  padding: 12px 25px; 
+}
+
+.cs_margin_top{
+  margin-top: 5px;
+}
+
+.cs_margin_top2{
+  margin-top: 10px;
+}
+
 
 .cs_margin_bottom{
   margin-bottom: 80px;
@@ -11784,6 +11827,14 @@ Pricing controller
 
 .cs_padding_bottom{
   padding-bottom: 200px;
+}
+
+.cs_padding_bottom2{
+  padding-bottom: 23px;
+}
+
+.cs_padding_bottom3{
+  padding-bottom: 100px;
 }
 
 
