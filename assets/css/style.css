@@ -11841,6 +11841,10 @@ Pricing controller
 .cs_padding_bottom3{
   padding-bottom: 200px;
 }
+.cs_padding_bottom4{
+  padding-bottom: 110px;
+}
+
 
 
 .cs_style_2{
@@ -11885,7 +11889,7 @@ Pricing controller
 
   /* 2. Centre le texte et ajuste les espacements */
   .cs_hero_content_wrapper {
-    padding: 200px 20px 60px; /* Espace pour le header et séparation basse */ /*Important haut de page !!!!!!!!!!!!!!!!!!!!!!!!!*/
+    padding: 180px 20px 60px; /* Espace pour le header et séparation basse */ /*Important haut de page !!!!!!!!!!!!!!!!!!!!!!!!!*/
     text-align: center;
   }
 
@@ -11988,7 +11992,8 @@ body {
 
 /* Section */
 .specialites {
-  padding: 40px 20px;
+  padding-top: 40px;
+  
 }
 
 /* GRID */
