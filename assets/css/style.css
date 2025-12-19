@@ -4211,7 +4211,7 @@ a.ui-button:active,
 7. Header
 ----------------------------------------------------------------*/
 /* Header Styles */
-/* Initial state (top of page) */
+/* Initial state (top of page)  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/      
 .cs_site_header.cs_header_transparent .cs_nav .cs_nav_list > li > a,
 .cs_site_header.cs_header_transparent .cs_header_number {
   color: #fff !important;
@@ -5245,7 +5245,7 @@ a.ui-button:active,
     z-index: 11;
   }
   .cs_site_header.cs_style_1.cs_heading_color .cs_menu_toggle {
-    color: var(--heading-color);
+    color: var(--white-color);
   }
   .cs_site_header.cs_style_1.cs_heading_color .cs_nav .cs_nav_list_wrap {
     background-color: #fff;
@@ -12037,14 +12037,18 @@ Pricing controller
   margin-top: 970px;
 }
 
-.cs_site_header .cs_nav_list a{
-  color : black;
+.cs_site_header.cs_header_transparent .cs_nav .cs_nav_list > li > a,
+.cs_site_header.cs_header_transparent .cs_header_number {
+  color: #000 !important;
+  transition: color 0.3s ease;
 }
 
+.cs_logo_white{
 
+display: none !important;
 
 }
-
+}
 
 @media (min-width:1440px) {  
 
@@ -12052,6 +12056,12 @@ Pricing controller
     display: none;
    
   }
+
+
+
+  .cs_site_header {
+  color: #000 !important;
+}
 
 
 }

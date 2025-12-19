@@ -79,7 +79,7 @@
           <div class="cs_main_header_left">
             <a class="cs_site_branding" href="index.html">
               <img class="cs_logo_white" style="width: 170px; height: auto;" src="assets/img/sadouni-logo-dark.svg" alt="Logo">
-              <img class="cs_logo_dark" style="width: 170px; height: auto; display: none;" src="assets/img/sadouni-logo.svg" alt="Logo">
+              <img class="cs_logo_dark" style="width: 170px; height: auto; display: block;" src="assets/img/sadouni-logo.svg" alt="Logo">
             </a>
           </div>
           <div class="cs_main_header_center">
@@ -904,7 +904,11 @@ Le Dr Choaib Sadouni propose des soins ophtalmologiques personnalisés, alliant 
       
       // Function to update navbar style
       function updateNavbar() {
-        if (window.scrollY > 50) {
+                const isDesktop = window.innerWidth > 1199; // desktop si écran > 1199px
+
+                if (!isDesktop) return; // si pas desktop, ne fait rien sur mobile        if (window.scrollY > 50 ) {
+
+                  if (window.scrollY > 50) {
           // When scrolled
           header.classList.add('cs_scrolled');
           header.style.backgroundColor = '#fff';
@@ -970,17 +974,21 @@ Le Dr Choaib Sadouni propose des soins ophtalmologiques personnalisés, alliant 
       });
     });
 
-const submenuLinks = document.querySelectorAll('.cs_nav_list .sub-menu a');
-const menuToggle = document.querySelector('.cs_menu_toggle');
+const navLinks = document.querySelectorAll('.cs_nav_list > li > a, .cs_header_number');
+  const submenuLinks = document.querySelectorAll('.cs_nav_list .sub-menu a');
+  const menuToggle = document.querySelector('.cs_menu_toggle');
+  const header = document.querySelector('.cs_site_header');
 
-if (menuToggle) {
-  menuToggle.addEventListener('click', () => {
-    // Quand le menu s'ouvre, forcer la couleur noire sur les sous-menus
-    submenuLinks.forEach(link => {
-      link.style.color = '#000';
+  if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+      // Toggle une classe pour savoir si le menu est ouvert
+      header.classList.toggle('menu-open');
+
+      // Tous les liens principaux et sous-menus deviennent noirs
+      navLinks.forEach(link => link.style.color = '#000');
+      submenuLinks.forEach(link => link.style.color = '#000');
     });
-  });
-}
+  }
 
 
 
