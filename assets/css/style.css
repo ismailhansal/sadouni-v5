@@ -807,7 +807,7 @@ textarea {
     height: 150px;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1440px) {
   .cs_height_lg_1 {
     height: 1px;
   }
@@ -3285,7 +3285,7 @@ html .ui-button.ui-state-disabled:active {
   -webkit-transform: translateX(-15px);
           transform: translateX(-15px);
 }
-@media (max-width: 500px) {
+@media (max-width: 1440px) {
   .ui-datepicker {
     max-width: 290px;
   }
@@ -11946,7 +11946,7 @@ Pricing controller
 
 
 /* --- Correction du flux Hero + Info Boxes --- */
-@media (max-width: 991px) {
+@media (max-width: 1440px) {
   /* 1. La section Hero s'adapte à son contenu (plus de hauteur fixe) */
   .cs_hero {
     height: 100%; 
@@ -12045,7 +12045,7 @@ Pricing controller
 
 .cs_logo_white{
 
-display: none !important;
+display: none;
 
 }
 }
